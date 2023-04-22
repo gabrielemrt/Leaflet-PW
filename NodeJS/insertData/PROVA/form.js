@@ -3,6 +3,7 @@ const fs = require('fs');
 
 const server = http.createServer((req, res) => {
   if (req.url === '/form' && req.method === 'GET') {
+    
     // leggi il file HTML del form
     fs.readFile('form.html', (err, data) => {
       if (err) {
@@ -16,23 +17,27 @@ const server = http.createServer((req, res) => {
       }
     });
   } else if (req.url === '/form' && req.method === 'POST') {
+    
     // gestisci la richiesta POST
     let body = '';
     req.on('data', chunk => {
       body += chunk.toString();
     });
     req.on('end', () => {
+    
       // elabora i dati del form
       const params = new URLSearchParams(body);
       const dataProgetto = params.get('data_progetto');
       const latitudine = params.get('latitudine');
       const longitudine = params.get('longitudine');
       const note = params.get('note');
+    
       // fai qualcosa con i dati inseriti nel form
       console.log(`Data del progetto: ${dataProgetto}`);
       console.log(`Latitudine: ${latitudine}`);
       console.log(`Longitudine: ${longitudine}`);
       console.log(`Note: ${note}`);
+    
       // rispondi con un messaggio di conferma
       res.writeHead(200, {'Content-Type': 'text/plain'});
       res.write('Dati del form inviati correttamente');
