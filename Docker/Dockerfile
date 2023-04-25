@@ -1,7 +1,7 @@
 FROM node:7.7.2-alpine
 
-COPY ../NodeJS .
 WORKDIR /usr/app/nodeapp
-RUN node mon
-RUN npm install -gy nodemon
+
+COPY ../NodeJS/insertData/ .
+RUN npm install
 RUN npm start 
