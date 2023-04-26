@@ -1,0 +1,6 @@
+FROM mysql:5.7
+
+WORKDIR /data/application/
+COPY database/ .
+
+EXPOSE 3306

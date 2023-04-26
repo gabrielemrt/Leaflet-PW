@@ -29,14 +29,16 @@ axios.get('/markers')
     .then(function (response){
         response.data.forEach(marker => {
             console.log(marker);
-            var anno = marker.DATA_INIZIO.substr(0,4) //Dalla data del progetto ottengo l'anno
+            var data_inizio = marker.data_inizio_progetto.substr(0, 10);
+            var data_fine = marker.data_fine_progetto.substr(0, 10);
+            var anno = marker.data_inizio_progetto.substr(0,4) //Dalla data del progetto ottengo l'anno
             var existing = false; //variabile che serve per verificare se un'anno esiste già nell'array degli anni
-            var link = "http://www.google.com/maps/place/"+marker.lat+","+marker.longit;
+            var link = "http://www.google.com/maps/place/"+marker.latitudine+","+marker.longitudine;
             var googleMaps = "<a href="+link+" target='_blank'>Google Maps</a>";
             //inserisco in una variabile il contenuto del popup
-            var popup_data = "<h3>" + marker.NOME_PROGETTO + "</h3>" + "<strong> Data inizio: </strong>" + marker.DATA_INIZIO + "<br>" + "<strong>Data fine: </strong>" + marker.DATA_FINE + "<br>" + "<strong>Descrizione: </strong>" + marker.DESCRIZIONE + "<br>" + googleMaps;
+            var popup_data = "<h3>" + marker.nome_progetto + "</h3>" + "<strong> Data inizio: </strong>" + data_inizio + "<br>" + "<strong>Data fine: </strong>" + data_fine + "<br>" + "<strong>Descrizione: </strong>" + marker.note + "<br>" + googleMaps;
             //inserisco in una variabile il marker
-            var m = L.marker([marker.lat, marker.longit]).bindPopup(popup_data);
+            var m = L.marker([marker.latitudine, marker.longitudine]).bindPopup(popup_data);
             if (anni.length == 0) {     //per il primo marker aggiungo già l'anno nel'array e il marker nell'array dei gruppi
                 anni[0]=anno;   //faccio questo per il primo elemento perchè nei for successivi la condizione i<anni.length non sarebbe verificata e non riuscirebbe mai ad entrare nei for
                 groups[0]=L.layerGroup([]);
@@ -66,6 +68,7 @@ axios.get('/markers')
         console.log(anni); //per verificare se l'array anni e l'array groups sono corretti
         console.log(groups);
         for (let i = 0; i < anni.length; i++) {  //inserisco nell'ogetto appena crato le coppie "nomelayer":markers (nomelayer è l'elemento dell'array anni e i markers sono l'elemento dell'array groups)
+            groups[i].addTo(map);
             overlayMaps[anni[i]] = groups[i];
         }
         //creo il layer controller (menù) con le mappe di base e i layers e lo aggiungo alla mappa
@@ -93,7 +96,7 @@ L.LogoControl = L.Control.extend({
         var button = L.DomUtil.create('a', '', container);
             button.innerHTML = '<img width="200px" class="logo-control-img" src="https://georicerche.com/wp-content/uploads/2019/03/logo-2018.png">';
         L.DomEvent.disableClickPropagation(button);
-        container.title = "LOGO Description";
+        container.title = "Georicerche";
 
         return container;
     },
