@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 const fs = require('fs');
 
-
-router.get('/', (req, res) => {
+/*
+router.get('/form', (req, res) => {
 
 
     // leggi il file HTML del form
@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
 
 
 
-router.post('/', (req, res) => {
+router.post('/form', (req, res) => {
 
 
     // gestisci la richiesta POST
@@ -55,6 +55,8 @@ router.post('/', (req, res) => {
     });
 
 
-});
+});*/
+
+
 
 module.exports = router;
