@@ -9,5 +9,5 @@ services:
       - "3000:3000"
     expose:
       - "3000"
-    command: node form.js
-    restart: always
+    command: npm start
+  #restart: always

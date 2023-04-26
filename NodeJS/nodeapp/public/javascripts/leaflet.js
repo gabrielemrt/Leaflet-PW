@@ -5,11 +5,6 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-	maxZoom: 20,
-	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-});
-
 var Stamen_Terrain = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 	subdomains: 'abcd',
@@ -24,7 +19,6 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
 //Creo un oggetto che contiene tutte le mappe di base, poi lo aggiungerò al menù dei layer
 var baseMaps = {
     "OpenStreetMap": osm,
-    "Dark": Stadia_AlidadeSmoothDark,
     "Terreno": Stamen_Terrain,
     "Satellite": Esri_WorldImagery
 }
@@ -35,14 +29,14 @@ axios.get('/markers')
     .then(function (response){
         response.data.forEach(marker => {
             console.log(marker);
-            var anno = marker.DATA_INIZIO.substr(-4) //Dalla data del progetto ottengo l'anno
+            var anno = marker.DATA_INIZIO.substr(0,4) //Dalla data del progetto ottengo l'anno
             var existing = false; //variabile che serve per verificare se un'anno esiste già nell'array degli anni
-            var link = "http://www.google.com/maps/place/"+marker.WGS84_Y+","+marker.WGS84_X;
+            var link = "http://www.google.com/maps/place/"+marker.lat+","+marker.longit;
             var googleMaps = "<a href="+link+" target='_blank'>Google Maps</a>";
             //inserisco in una variabile il contenuto del popup
-            var popup_data = "<h3>" + marker.NOME_PROGETTO + "</h3>" + "<strong> Data inizio: </strong>" + marker.DATA_INIZIO + "<br>" + "<strong>Data fine: </strong>" + marker.DATA_FINE + "<br>" + "<strong>Indirizzo: </strong>" + marker.VIA + " " + marker.CIVICO + ", " + marker.COMUNE + " " + marker.CAP + " (" + marker.PROVINCIA + "), " + marker.STATO + "<br>" + "<strong>Descrizione: </strong>" + marker.DESCRIZIONE + "<br>" + googleMaps;
+            var popup_data = "<h3>" + marker.NOME_PROGETTO + "</h3>" + "<strong> Data inizio: </strong>" + marker.DATA_INIZIO + "<br>" + "<strong>Data fine: </strong>" + marker.DATA_FINE + "<br>" + "<strong>Descrizione: </strong>" + marker.DESCRIZIONE + "<br>" + googleMaps;
             //inserisco in una variabile il marker
-            var m = L.marker([marker.WGS84_Y, marker.WGS84_X]).bindPopup(popup_data);
+            var m = L.marker([marker.lat, marker.longit]).bindPopup(popup_data);
             if (anni.length == 0) {     //per il primo marker aggiungo già l'anno nel'array e il marker nell'array dei gruppi
                 anni[0]=anno;   //faccio questo per il primo elemento perchè nei for successivi la condizione i<anni.length non sarebbe verificata e non riuscirebbe mai ad entrare nei for
                 groups[0]=L.layerGroup([]);
@@ -77,3 +71,32 @@ axios.get('/markers')
         //creo il layer controller (menù) con le mappe di base e i layers e lo aggiungo alla mappa
         var layerControl = L.control.layers(baseMaps, overlayMaps, {position: 'topleft'}).addTo(map);
     });
+//auth0
+const logoutButton = document.getElementById("logout-button");
+const logoutLink = document.getElementById("logout-link");
+    
+if (logoutButton && logoutLink) {
+    logoutButton.addEventListener("click", () => {
+    logoutLink.click();
+    });
+}
+
+/*aggiunta logo georicerche*/
+L.LogoControl = L.Control.extend({
+    options: {
+        position: 'bottomleft'
+        //control position - allowed: 'topleft', 'topright', 'bottomleft', 'bottomright'
+    },
+
+    onAdd: function (map) {
+        var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control logo-control');
+        var button = L.DomUtil.create('a', '', container);
+            button.innerHTML = '<img width="200px" class="logo-control-img" src="https://georicerche.com/wp-content/uploads/2019/03/logo-2018.png">';
+        L.DomEvent.disableClickPropagation(button);
+        container.title = "LOGO Description";
+
+        return container;
+    },
+});
+
+new L.LogoControl().addTo(map)

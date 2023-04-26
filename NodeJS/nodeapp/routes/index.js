@@ -2,15 +2,16 @@ var express = require('express');
 var router = express.Router();
 const fs = require('fs');
 const path = require('path');
-
-//GET home page. 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const { requiresAuth } = require('express-openid-connect') //auth0
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', requiresAuth(), function(req, res, next) {
+  console.log(req.oidc.isAuthenticated()); //auth0
+  res.render('index', { 
+    title: 'Express',
+    isAuthenticated: req.oidc.isAuthenticated(), //auth0
+    user: req.oidc.user, //auth0
+  });
 });
 
 const db_path = path.join(__dirname,'../db/db.json');
@@ -20,7 +21,6 @@ router.get('/markers', function(req, res, next) {
     console.log(data);
     res.send(JSON.parse(data));
   });
-
 });
 
 const form_path = path.join(__dirname,'../form/form.html')
@@ -42,6 +42,5 @@ router.post('/form', (req, res) => {
   res.end();
 
 });
-
 
 module.exports = router;
