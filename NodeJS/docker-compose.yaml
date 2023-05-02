@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile-nodeapp
+    environment:
+      NODE_ENV: production
+      MYSQL_HOST: db
+      MYSQL_USER: root 
+      MYSQL_PASSWORD: leaflet
+      MYSQL_DATABASE: markers
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    command: npm start
+    restart: always
+
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile-db
+    command: --init-file /data/application/init.sql
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    environment:
+      MYSQL_HOST: localhost
+      MYSQL_ROOT_PASSWORD: leaflet
+      MYSQL_DATABASE: markers
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_ROOT_PASSWORD
+      start_period: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 55
+    
+    restart: always
