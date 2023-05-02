@@ -4,7 +4,7 @@ body{
     height: 100%;
     margin: 0px;
 
-    background-color: #714B2B;
+    background-color: #FBECD9;
     font-family: Arial;
 
     display: flex;
@@ -17,13 +17,24 @@ h1{
 }
 
 #conteiner{
-    background-color: antiquewhite;
+    background-color: #4C3E39;
     border-radius: 3vmax;
-    width: 34vmax;
+    width: 80%;
+    height: 70%;
     text-align: center;
     padding: 1vmax;
+    display: flex;
 }
 
+.img-form{
+    width: 50%;
+    background: white;
+}
+
+.div-form{
+    width: 50%;
+    color: #FBECD9;
+}
 .input-contein{
     display: flex;
     justify-content: space-between;
@@ -33,17 +44,25 @@ h1{
 }
 
 .input{
-    border-radius: 0.5vmax;
+    
     font-family: Arial;
     font-size: 1.2vmax;
     width: 46%;
     padding: 2px;
     margin-right: 2vmax;
+    border-radius: 16px;
+    background-color: transparent;
+    color: #FBECD9;
+    height: 48px;
+    border: 1px solid #FBECD9
 }
 
 button{
-    border-radius: 2vmax;
-    font-size: 1.7vmax;
+    border-radius: 16px;
+    font-size: 20px;
     padding: 0.5vmax 1vmax;
-    margin-top: 2vmax;
+    background-color: #FBECD9;
+    color: #4C3E39;
+    width: 200px;
+    height: 50px;
 }

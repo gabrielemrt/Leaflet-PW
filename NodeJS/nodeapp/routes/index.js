@@ -15,7 +15,7 @@ router.get('/', requiresAuth(), function(req, res, next) {
     user: req.oidc.user, //auth0
   });
 });
-
+/*
 // Creating connection
 let connection = mysql.createConnection({
   host: process.env.MYSQL_HOST,
@@ -23,7 +23,16 @@ let connection = mysql.createConnection({
   password: process.env.MYSQL_PASSWORD,
   database: process.env.MYSQL_DATABASE
 });
+*/
 
+const db_path = path.join(__dirname, '../db/db.json');
+router.get('/markers', (req, res) => {
+  fs.readFile(db_path, (err, data) =>{
+    res.send(JSON.parse(data));
+  });
+});
+
+/*
 router.get('/markers', (req, res) => {
   connection.query(
     'SELECT * FROM progetti;',
@@ -31,7 +40,7 @@ router.get('/markers', (req, res) => {
       if (error) throw error;
       res.json(results)});
 });
-
+*/
 const form_path = path.join(__dirname,'../form/form.html');
 
 router.get('/form', function(req, res, next) {
