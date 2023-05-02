@@ -34,9 +34,9 @@ axios.get('/markers')
             var anno = marker.data_inizio_progetto.substr(0,4) //Dalla data del progetto ottengo l'anno
             var existing = false; //variabile che serve per verificare se un'anno esiste già nell'array degli anni
             var link = "http://www.google.com/maps/place/"+marker.latitudine+","+marker.longitudine;
-            var googleMaps = "<a href="+link+" target='_blank'>Google Maps</a>";
+            var googleMaps = "<a href="+link+" target='_blank'>Indicazioni</a>";
             //inserisco in una variabile il contenuto del popup
-            var popup_data = "<h3>" + marker.nome_progetto + "</h3>" + "<strong> Data inizio: </strong>" + data_inizio + "<br>" + "<strong>Data fine: </strong>" + data_fine + "<br>" + "<strong>Descrizione: </strong>" + marker.note + "<br>" + googleMaps;
+            var popup_data = "<h3>" + marker.nome_progetto + "</h3>" + "<strong> Data inizio: </strong>" + data_inizio + "<br>" + "<strong>Data fine: </strong>" + data_fine + "<br>" + "<strong>Descrizione: </strong>" + marker.note + "<br>" + "<button class='indicazioni'>" + '<?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#4c3e38"><path d="M4.031 8.917l15.477-4.334a.5.5 0 01.616.617l-4.333 15.476a.5.5 0 01-.94.067l-3.248-7.382a.5.5 0 00-.256-.257L3.965 9.856a.5.5 0 01.066-.94z" stroke="#4c3e38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>' + googleMaps + "</button>";
             //inserisco in una variabile il marker
             var m = L.marker([marker.latitudine, marker.longitudine]).bindPopup(popup_data);
             if (anni.length == 0) {     //per il primo marker aggiungo già l'anno nel'array e il marker nell'array dei gruppi
