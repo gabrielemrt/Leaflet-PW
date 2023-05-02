@@ -20,49 +20,62 @@ h1{
     background-color: #4C3E39;
     border-radius: 3vmax;
     width: 80%;
-    height: 70%;
-    text-align: center;
+    height: fit-content;
+
     padding: 1vmax;
     display: flex;
+    gap: 20px;
+
+}
+
+hr{
+    color: #FBECD9;
 }
 
 .img-form{
     width: 50%;
     background: white;
+    border-radius: 3vmax 0 0 3vmax;
 }
 
 .div-form{
     width: 50%;
     color: #FBECD9;
+    
+
 }
+
 .input-contein{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 1.5vmax;
     padding: 1vmax;
 }
 
 .input{
-    
     font-family: Arial;
     font-size: 1.2vmax;
-    width: 46%;
+    width: 100%;
     padding: 2px;
-    margin-right: 2vmax;
     border-radius: 16px;
     background-color: transparent;
     color: #FBECD9;
     height: 48px;
-    border: 1px solid #FBECD9
+    border: 1px solid #FBECD9;
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin-top: 9px;
 }
 
 button{
     border-radius: 16px;
     font-size: 20px;
-    padding: 0.5vmax 1vmax;
     background-color: #FBECD9;
     color: #4C3E39;
     width: 200px;
     height: 50px;
+    position: relative;
+    left: calc(50% - 100px);
+}
+
+.riga{
+    display: flex;
 }
