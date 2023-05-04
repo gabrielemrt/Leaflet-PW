@@ -15,6 +15,7 @@ router.get('/', requiresAuth(), function(req, res, next) {
     user: req.oidc.user, //auth0
   });
 });
+
 /*
 // Creating connection
 let connection = mysql.createConnection({

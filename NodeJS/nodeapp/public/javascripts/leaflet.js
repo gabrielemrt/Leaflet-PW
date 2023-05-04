@@ -22,13 +22,24 @@ var baseMaps = {
     "Terreno": Stamen_Terrain,
     "Satellite": Esri_WorldImagery
 }
+var nome_progetto = [];
+var latlng = [];
+var ciccio = [];
+var markers = [];
 
+var markersLayer = new L.layerGroup([]);
 var anni =  []; //creo un array vuoto in cui inserirò gli anni per andare poi a comporre ogni layer
 var groups = []; //creo un array in cui inserirò i gruppi di marker per ogni layer
 axios.get('/markers')
     .then(function (response){
         response.data.forEach(marker => {
-            console.log(marker);
+            nome_progetto.push(marker.nome_progetto);
+            var coordinate = [marker.latitudine, marker.longitudine];
+            latlng.push(coordinate);
+            ciccio = nome_progetto.map(function(nome_progetto, index) {
+                return { name: nome_progetto, latlng: latlng[index] };
+            });
+            markers.push(ciccio);
             var data_inizio = marker.data_inizio_progetto.substr(0, 10);
             var data_fine = marker.data_fine_progetto.substr(0, 10);
             var anno = marker.data_inizio_progetto.substr(0,4) //Dalla data del progetto ottengo l'anno
@@ -39,6 +50,8 @@ axios.get('/markers')
             var popup_data = "<h3>" + marker.nome_progetto + "</h3>" + "<strong> Data inizio: </strong>" + data_inizio + "<br>" + "<strong>Data fine: </strong>" + data_fine + "<br>" + "<strong>Descrizione: </strong>" + marker.note + "<br>" + "<button class='indicazioni'>" + '<?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#4c3e38"><path d="M4.031 8.917l15.477-4.334a.5.5 0 01.616.617l-4.333 15.476a.5.5 0 01-.94.067l-3.248-7.382a.5.5 0 00-.256-.257L3.965 9.856a.5.5 0 01.066-.94z" stroke="#4c3e38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>' + googleMaps + "</button>";
             //inserisco in una variabile il marker
             var m = L.marker([marker.latitudine, marker.longitudine]).bindPopup(popup_data);
+            var m2 = L.marker([marker.latitudine, marker.longitudine], {title: marker.nome_progetto});
+            markersLayer.addLayer(m2);
             if (anni.length == 0) {     //per il primo marker aggiungo già l'anno nel'array e il marker nell'array dei gruppi
                 anni[0]=anno;   //faccio questo per il primo elemento perchè nei for successivi la condizione i<anni.length non sarebbe verificata e non riuscirebbe mai ad entrare nei for
                 groups[0]=L.layerGroup([]);
@@ -64,16 +77,19 @@ axios.get('/markers')
                 }
             }
         });
-        var overlayMaps = {}; //creo un ogetto vuoto
+
+        var overlayMaps = {}; //creo un oggetto vuoto
         console.log(anni); //per verificare se l'array anni e l'array groups sono corretti
         console.log(groups);
-        for (let i = 0; i < anni.length; i++) {  //inserisco nell'ogetto appena crato le coppie "nomelayer":markers (nomelayer è l'elemento dell'array anni e i markers sono l'elemento dell'array groups)
+        for (let i = 0; i < anni.length; i++) {  //inserisco nell'ogetto appena creato le coppie "nomelayer":markers (nomelayer è l'elemento dell'array anni e i markers sono l'elemento dell'array groups)
             groups[i].addTo(map);
             overlayMaps[anni[i]] = groups[i];
         }
         //creo il layer controller (menù) con le mappe di base e i layers e lo aggiungo alla mappa
         var layerControl = L.control.layers(baseMaps, overlayMaps, {position: 'topleft'}).addTo(map);
     });
+console.log(markersLayer);
+//map.addLayer(markersLayer);
 //auth0
 const logoutButton = document.getElementById("logout-button");
 const logoutLink = document.getElementById("logout-link");
@@ -84,22 +100,14 @@ if (logoutButton && logoutLink) {
     });
 }
 
-/*aggiunta logo georicerche*/
-L.LogoControl = L.Control.extend({
-    options: {
-        position: 'bottomleft'
-        //control position - allowed: 'topleft', 'topright', 'bottomleft', 'bottomright'
-    },
+map.addLayer(markersLayer);
 
-    onAdd: function (map) {
-        var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control logo-control');
-        var button = L.DomUtil.create('a', '', container);
-            button.innerHTML = '<img width="200px" class="logo-control-img" src="https://georicerche.com/wp-content/uploads/2019/03/logo-2018.png">';
-        L.DomEvent.disableClickPropagation(button);
-        container.title = "Georicerche";
-
-        return container;
-    },
+var searchControl = new L.Control.Search({
+    layer: markersLayer,
+    initial: false,
+    marker: false,
+    zoom: 12
 });
 
-new L.LogoControl().addTo(map)
+
+map.addControl(searchControl);
