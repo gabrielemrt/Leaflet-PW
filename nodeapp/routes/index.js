@@ -44,10 +44,11 @@ router.get('/style.css', function(req, res, next) {
 
 router.post('/form', async (req, res) => {
   connection.query(
-    "INSERT INTO progetti (nome_progetto, data_inizio_progetto, data_fine_progetto, latitudine, longitudine, note) VALUES (?, ?, ?, ?, ?, ?)", [
+    "INSERT INTO progetti (nome_progetto, data_inizio_progetto, data_fine_progetto, citta, latitudine, longitudine, note) VALUES (?, ?, ?, ?, ?, ?, ?)", [
       req.body.nome_progetto,
       req.body.data_inizio_progetto, 
       req.body.data_fine_progetto, 
+      req.body.citta,
       req.body.latitudine, 
       req.body.longitudine, 
       req.body.note, 
