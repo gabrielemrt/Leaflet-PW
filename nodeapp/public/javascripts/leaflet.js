@@ -35,7 +35,7 @@ axios.get('/markers')
             var anno = marker.data_inizio_progetto.substr(0,4) //Dalla data del progetto ottengo l'anno
             var existing = false; //variabile che serve per verificare se un'anno esiste già nell'array degli anni
             var link = "http://www.google.com/maps/place/"+marker.latitudine+","+marker.longitudine;
-            var del = "/delete/:"+marker.id;
+            var del = "/delete/"+marker.id;
             var googleMaps = "<a href="+link+" target='_blank'>Indicazioni</a>";
             //var elimina = "<a href="+del+">Elimina</a>";
             var elimina = "<a href="+del+"> Elimina</a>";

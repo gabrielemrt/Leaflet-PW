@@ -65,7 +65,6 @@ router.get('/delete/:id', (req, res) => {
   connection.query("DELETE FROM progetti WHERE id = ?", [id], 
   function(error, results, fields) {
       if (error) throw error;
-      res.redirect('/');
     }
   );
   res.redirect('/');
