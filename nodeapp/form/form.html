@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Inserimento dati</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="conteiner">
+      <div class="img-form">
+        
+      </div>
+      <div class="div-form">
+        <h1>Aggiungi un nuovo progetto</h1>
+        <hr>
+  
+        <form method="POST">
+          <div class="input-contein ">
+            <label>Nome Progetto</label>
+            <input type="text" name="nome_progetto" class="input" placeholder="Aggiungi un nome...">
+          </div>
+  
+          <div class="riga">
+            <div class="input-contein ">
+            <label>Data Inizio</label>
+            <input type="date" name="data_inizio_progetto" class="input">
+          </div>
+  
+          <div class="input-contein ">
+            <label>Data Fine</label>
+            <input type="date" name="data_fine_progetto" class="input">
+          </div>
+          </div>
+          
+          <div class="riga">
+            <div class="input-contein ">
+            <label>Latitudine</label>
+            <input type="text" name="latitudine" class="input">
+          </div>
+  
+          <div class="input-contein ">
+            <label>Longitudine</label>
+            <input type="text" name="longitudine" class="input">
+          </div>
+          </div>
+          
+  
+          <div class="input-contein ">
+            <label>Note</label>
+            <textarea name="note" class="input"></textarea>
+          </div>
+          
+          <button type="submit">Invia dati</button>
+        </form>
+      </div>
+      
+    </div>
+  </body>
+</html>

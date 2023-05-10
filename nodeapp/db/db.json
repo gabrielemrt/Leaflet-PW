@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nome_progetto": "Progetto1",
+    "data_inizio_progetto": "2020-01-01",
+    "data_fine_progetto": "2022-12-31",
+    "latitudine": 45.43073746934498,
+    "longitudine": 10.99958034489608,
+    "note": "note1"
+  },
+  {
+    "id": 2,
+    "nome_progetto": "Progetto2",
+    "data_inizio_progetto": "2022-03-02",
+    "data_fine_progetto": "2022-04-12",
+    "latitudine": 45.40616719850837,
+    "longitudine": 10.976917918747873,
+    "note": "note2"
+  },
+  {
+    "id": 3,
+    "nome_progetto": "Progetto3",
+    "data_inizio_progetto": "2022-05-10",
+    "data_fine_progetto": "2022-07-06",
+    "longitudine": 11.332449285871883,
+    "latitudine": 45.52110092051088,
+    "note": "note3"
+  },
+  {
+    "id": 4,
+    "nome_progetto": "Progetto4",
+    "data_inizio_progetto": "2022-11-10",
+    "data_fine_progetto": "2022-12-06",
+    "longitudine": 11.009397590823669,
+    "latitudine": 45.4584950355898,
+    "note": "note4"
+  },
+  {
+    "id": 5,
+    "nome_progetto": "Progetto5",
+    "data_inizio_progetto": "2021-10-23",
+    "data_fine_progetto": "2022-12-05",
+    "longitudine": 11.546874078176373,
+    "latitudine": 45.547580636515704,
+    "note": "note5"
+  }
+]

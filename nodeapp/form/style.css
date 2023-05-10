@@ -1,0 +1,85 @@
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+
+    background-color: #FBECD9;
+    font-family: Arial;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 2.6vmax;
+}
+
+#conteiner{
+    background-color: #4C3E39;
+    border-radius: 3vmax;
+    width: 80%;
+    height: fit-content;
+
+    padding: 1vmax;
+    display: flex;
+    gap: 20px;
+
+}
+
+hr{
+    color: #FBECD9;
+}
+
+.img-form{
+    width: 50%;
+    background: white;
+    border-radius: 3vmax 0 0 3vmax;
+    background-image: url('https://img.freepik.com/vector-gratis/concepto-agrimensor-tecnologia-agrimensura-geodesia-ciencia-equipos-ingenieria-topografia-personas-mapa-brujula-equipo-topografico-ilustracion-plana-vectorial_613284-2907.jpg?w=2000');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-form{
+    width: 50%;
+    color: #FBECD9;
+    
+
+}
+
+.input-contein{
+    font-size: 1.5vmax;
+    padding: 1vmax;
+}
+
+.input{
+    font-family: Arial;
+    font-size: 1.2vmax;
+    width: 100%;
+    padding: 2px;
+    border-radius: 16px;
+    background-color: transparent;
+    color: #FBECD9;
+    height: 48px;
+    border: 1px solid #FBECD9;
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin-top: 9px;
+}
+
+button{
+    border-radius: 16px;
+    font-size: 20px;
+    background-color: #FBECD9;
+    color: #4C3E39;
+    width: 200px;
+    height: 50px;
+    position: relative;
+    left: calc(50% - 100px);
+}
+
+.riga{
+    display: flex;
+}

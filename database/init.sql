@@ -3,6 +3,7 @@ CREATE DATABASE IF NOT EXISTS markers;
 USE markers;
 
 CREATE TABLE IF NOT EXISTS progetti (
+	id int(11) AUTO_INCREMENT PRIMARY KEY,
 	nome_progetto varchar(255) unique,
 	data_inizio_progetto date,
 	data_fine_progetto date,
