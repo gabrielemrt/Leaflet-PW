@@ -4,7 +4,7 @@
 [![MIT License][license-shield]](https://github.com/gabrielemrt/Leaflet-PW/license)
 <div align="center">
   <h1 align="center">Leaflet-PW</h1>
-  <img src="images/icon.png" alt="Logo" style="width: 300px; height: 300px;">
+  <img src="images/icon.png" alt="Logo" style="width: 200px; height: 200px;">
 </div>
 
 # INDICE
