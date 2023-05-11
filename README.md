@@ -63,7 +63,7 @@ Infine, è necessaria anche un’ottimizzazione del codice ed una gestione degli
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/gabrielemrt/Leaflet-PW.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/gabrielemrt/Leaflet-PW.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/gabrielemrt/Leaflet-PW.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/gabrielemrt/Leaflet-PW.svg?style=for-the-badge
