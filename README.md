@@ -1,6 +1,6 @@
 [![Contributors][contributors-shield]](https://github.com/gabrielemrt/Leaflet-PW/contributors)
 [![Forks][forks-shield]](https://github.com/gabrielemrt/Leaflet-PW/forks)
-[![Stargazers][stars-shield]](https://github.com/gabrielemrt/Leaflet-PW/stars)
+[![Stargazers][stars-shield]](https://github.com/gabrielemrt/Leaflet-PW/stargazers)
 [![MIT License][license-shield]](https://github.com/gabrielemrt/Leaflet-PW/license)
 <div align="center">
   <h1 align="center">Leaflet-PW</h1>
