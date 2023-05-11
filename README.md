@@ -1,11 +1,11 @@
-![Contributors][https://github.com/gabrielemrt/Leaflet-PW/contributors]
-![Forks][forks-shield](https://github.com/gabrielemrt/Leaflet-PW/forks)
+# Leaflet-PW
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-# Leaflet-PW
 
 # Features
 -   [INTRODUZIONE](#INTRODUZIONE)
