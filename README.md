@@ -1,6 +1,11 @@
-# <center>Leaflet-PW</center>
-<img width="300px" src="./images/icon.png" align="center" />
-# <h1 align="center">Leaflet-PW</h1>
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/icon.png" alt="Logo" width="80" height="80">
+  </a>
+  <h3 align="center">Leaflet-PW</h3>
+  </p>
+</div>
  
 ![icona](./images/icon.png)
 
