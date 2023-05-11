@@ -1,5 +1,6 @@
 # <center>Leaflet-PW</center>
-<img width="100px" src="./images/icon.png" align="center" alt="Leaflet-PW" />
+<img width="300px" src="./images/icon.png" align="center" />
+<h1 align="center">Leaflet-PW</h1>
  
 ![icona](./images/icon.png)
 
