@@ -7,7 +7,7 @@
   <img src="images/icon.png" alt="Logo" style="width: 200px; height: 200px;">
 </div>
 
-# INDICE
+## INDICE
 -   [VIDEO](#VIDEO)
 -   [INTRODUZIONE](#INTRODUZIONE)
 -   [GIS e WEBGIS](#GIS-e-WEBGIS)
