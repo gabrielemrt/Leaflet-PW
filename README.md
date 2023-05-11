@@ -1,5 +1,6 @@
 # <center>Leaflet-PW</center>
-# <center>Leaflet-PW</center> #
+<img width="100px" src="./images/icon.png" align="center" alt="Leaflet-PW" />
+ 
 ![icona](./images/icon.png)
 
 # Features
