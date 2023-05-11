@@ -1,5 +1,5 @@
-![Contributors][https://github.com/gabrielemrt/Leaflet-PW/graphs/contributors]
-![Forks][forks-shield][forks-url]
+![Contributors][https://github.com/gabrielemrt/Leaflet-PW/contributors]
+![Forks][forks-shield](https://github.com/gabrielemrt/Leaflet-PW/forks)
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
