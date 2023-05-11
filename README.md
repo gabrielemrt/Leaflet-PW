@@ -68,7 +68,7 @@ Infine, è necessaria anche un’ottimizzazione del codice ed una gestione degli
 [license-shield]: https://img.shields.io/github/license/gabrielemrt/Leaflet-PW.svg?style=for-the-badge
 
 
-[auth0.img]: https://avatars.githubusercontent.com/u/2824157?s=280&v=4
+[auth0.img]:  https://img.shields.io/badge/auth0.img-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [NodeJs.img]: https://cdn-icons-png.flaticon.com/512/5968/5968322.png
 [ExpressJS.img]: https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png
 [LeafletJS.img]: https://w7.pngwing.com/pngs/347/210/png-transparent-leaflet-javascript-library-web-browser-plug-in-software-framework-others-leaf-rss-map.png
