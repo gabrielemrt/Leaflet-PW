@@ -1,7 +1,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/icon.png" alt="Logo" width="1200" height="627">
+    <img src="images/icon.png" alt="Logo" style="width: 600px; height: 314px;">
   </a>
   <h1 align="center">Leaflet-PW</h1>
   </p>
