@@ -39,7 +39,9 @@ Per l'archiviazione dei dati geo-referenziati, abbiamo scelto MySQL, un database
 * [![Docker][Docker.img]][Docker.link]
  
 ## STRUTTURA WEBAPP
-![Algorithm schema](./images/struttura.png)
+![Algorithm struttura](./images/struttura.png)
+ciaoone
+<img src="images/struttura.png">
 La nostra applicazione può essere schematizzata in tre nodi strutturali principali: 
 •	una banca dati in cui i dati geo-referenziati vengono immagazzinati
 •	una Node App lato server che analizza i dati e li visualizza su di una mappa
