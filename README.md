@@ -73,7 +73,7 @@ Infine, è necessaria anche un’ottimizzazione del codice ed una gestione degli
 [NodeJs.img]: https://img.shields.io/badge/nodeJS-yellow?style=for-the-badge&logo=nodejs&logoColor=white
 [ExpressJS.img]: https://img.shields.io/badge/ExpressJS-grey?style=for-the-badge&logo=express&logoColor=white
 [LeafletJS.img]: https://img.shields.io/badge/LeafletJS-green?style=for-the-badge&logo=leaflet&logoColor=white
-[MySQL.img]: https://img.shields.io/badge/mysql-#A5D9FD?style=for-the-badge&logo=mysql&logoColor=black
+[MySQL.img]: https://img.shields.io/badge/mysql-skyblue?style=for-the-badge&logo=mysql&logoColor=black
 [Docker.img]: https://img.shields.io/badge/docker-blue?style=for-the-badge&logo=docker&logoColor=white
 [auth0.link]: https://auth0.com/
 [NodeJs.link]: https://nodejs.org/
