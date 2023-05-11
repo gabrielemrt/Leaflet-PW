@@ -1,9 +1,6 @@
 <div align="center">
   <h1 align="center">Leaflet-PW</h1>
-  <a href="https://github.com/gabrielemrt/Leaflet-PW/">
-    <img src="images/icon.png" alt="Logo" style="width: 600px; height: 314px;">
-  </a>
-  </p>
+  <img src="images/icon.png" alt="Logo" style="width: 600px; height: 314px;">
 </div>
 
 # Features
