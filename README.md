@@ -69,7 +69,7 @@ Infine, è necessaria anche un’ottimizzazione del codice ed una gestione degli
 [license-shield]: https://img.shields.io/github/license/gabrielemrt/Leaflet-PW.svg?style=for-the-badge
 
 
-[auth0.img]:  https://img.shields.io/badge/auth0-000000?style=for-the-badge&logo=nextdotjs&logoColor=orange
+[auth0.img]:  https://img.shields.io/badge/auth0-orange?style=for-the-badge&logo=nextdotjs&logoColor=withe
 [NodeJs.img]: https://img.shields.io/badge/nodeJS-000000?style=for-the-badge&logo=nextdotjs&logoColor=yellow
 [ExpressJS.img]: https://img.shields.io/badge/ExpressJS-000000?style=for-the-badge&logo=nextdotjs&logoColor=grey
 [LeafletJS.img]: https://img.shields.io/badge/LeafletJS-000000?style=for-the-badge&logo=nextdotjs&logoColor=green
