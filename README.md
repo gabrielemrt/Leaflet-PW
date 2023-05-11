@@ -1,4 +1,4 @@
-![Contributors][contributors-shield][https://github.com/gabrielemrt/Leaflet-PW/graphs/contributors]
+![Contributors][https://github.com/gabrielemrt/Leaflet-PW/graphs/contributors]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -12,7 +12,6 @@ Il nostro progetto consiste nello sviluppo di una mappa interattiva e intuitiva,
 Abbiamo avuto due incontri con l'azienda tramite Google Meet: nel primo incontro abbiamo definito le richieste del prodotto, mentre nel secondo abbiamo esaminato il lavoro svolto fino a quel momento.
 
 ## GIS e WEBGIS
-<a name="webgis.png"></a>
 ![Algorithm schema](./images/webgis.png)
 Prima di entrare nel vivo del progetto, è doveroso un’introduzione concettuale su cosa sia un Gis ed un WebGis, che è la soluzione tecnologica utilizzata nel nostro progetto. 
 Il Gis è un sistema informativo computerizzato che permette l’acquisizione, registrazione, analisi, visualizzazione, restituzione, condivisione e presentazione di informazioni derivanti da dati geografici geo-riferiti. È quindi in grado di associare dei dati alla loro posizione geografica sulla superficie terrestre e di elaborarli per estrarne informazioni. 
