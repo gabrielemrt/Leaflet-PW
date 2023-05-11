@@ -3,7 +3,7 @@
   <img src="images/icon.png" alt="Logo" style="width: 600px; height: 314px;">
 </div>
 
-[![Contributors][contributors-shield]][https://github.com/gabrielemrt/Leaflet-PW/contributors]
+[![Contributors][contributors-shield]](https://github.com/gabrielemrt/Leaflet-PW/contributors)
 [![Forks][forks-shield]][https://github.com/gabrielemrt/Leaflet-PW/forks]
 [![Stargazers][stars-shield]][https://github.com/gabrielemrt/Leaflet-PW/stars]
 [![MIT License][license-shield]][https://github.com/gabrielemrt/Leaflet-PW/license]
