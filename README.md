@@ -70,11 +70,11 @@ Infine, è necessaria anche un’ottimizzazione del codice ed una gestione degli
 
 
 [auth0.img]:  https://img.shields.io/badge/auth0-orange?style=for-the-badge&logo=auth0&logoColor=white
-[NodeJs.img]: https://img.shields.io/badge/nodeJS-000000?style=for-the-badge&logo=nextdotjs&logoColor=yellow
-[ExpressJS.img]: https://img.shields.io/badge/ExpressJS-000000?style=for-the-badge&logo=nextdotjs&logoColor=grey
-[LeafletJS.img]: https://img.shields.io/badge/LeafletJS-000000?style=for-the-badge&logo=nextdotjs&logoColor=green
-[MySQL.img]: https://img.shields.io/badge/mysql-000000?style=for-the-badge&logo=nextdotjs&logoColor=orange
-[Docker.img]: https://img.shields.io/badge/docker-000000?style=for-the-badge&logo=nextdotjs&logoColor=blue
+[NodeJs.img]: https://img.shields.io/badge/nodeJS-yellow?style=for-the-badge&logo=node&logoColor=white
+[ExpressJS.img]: https://img.shields.io/badge/ExpressJS-grey?style=for-the-badge&logo=express&logoColor=white
+[LeafletJS.img]: https://img.shields.io/badge/LeafletJS-green?style=for-the-badge&logo=leaflet&logoColor=white
+[MySQL.img]: https://img.shields.io/badge/mysql-orange?style=for-the-badge&logo=mysql&logoColor=white
+[Docker.img]: https://img.shields.io/badge/docker-blue?style=for-the-badge&logo=docker&logoColor=white
 [auth0.link]: https://nextjs.org/
 [NodeJs.link]: https://nodejs.org/
 [ExpressJS.link]: https://expressjs.com/
