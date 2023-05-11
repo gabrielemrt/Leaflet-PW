@@ -4,6 +4,7 @@
     <img src="images/icon.png" alt="Logo" style="width: 600px; height: 314px;">
   </a>
   </p>
+</div>
 
 # Features
 -   [INTRODUZIONE](#INTRODUZIONE)
