@@ -41,10 +41,10 @@ Per l'archiviazione dei dati geo-referenziati, abbiamo scelto MySQL, un database
 ## STRUTTURA WEBAPP
 ![Algorithm struttura](./images/struttura.png)
 
-La nostra applicazione può essere schematizzata in tre nodi strutturali principali: 
-•	una banca dati in cui i dati geo-referenziati vengono immagazzinati
-•	una Node App lato server che analizza i dati e li visualizza su di una mappa
-•	un’interfaccia web accessibile tramite autenticazione
+La nostra applicazione può essere schematizzata in tre nodi strutturali principali:
+- una banca dati in cui i dati geo-referenziati vengono immagazzinati
+- una Node App lato server che analizza i dati e li visualizza su di una mappa
+- un’interfaccia web accessibile tramite autenticazione
 Il core del nostro applicativo è comunque la Node App, che gestisce i dati, li elabora, crea la mappa sulla quale questi dati andranno mostrati e si occupa anche della gestione dell’interfaccia web, comprensiva della sua parte grafica.
 
 ## TAPPE
