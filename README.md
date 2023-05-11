@@ -1,4 +1,4 @@
-# Leaflet-PW
+## <center>Leaflet-PW</center> ###
 ![Algorithm](./images/icon.png)
 
 # Features
