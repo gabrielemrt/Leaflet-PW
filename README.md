@@ -1,5 +1,5 @@
-# <center>Leaflet-PW</center>
-![Algorithm](./images/icon.png)
+<center># Leaflet-PW</center>
+![icona](./images/icon.png)
 
 # Features
 -   [INTRODUZIONE](#INTRODUZIONE)
