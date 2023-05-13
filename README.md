@@ -59,7 +59,7 @@ Per accedere al servizio, invece, bisognerà recarsi sul browser e, se il progra
 Nell’immediato futuro abbiamo intenzione di implementare due ulteriori funzioni: 
 - [ ] un bottone di modifica per i singoli campi dei progetti, così da evitare il loop inserisci/elimina nel caso avessimo sbagliato ad inserire un singolo dato;
 - [ ] un sistema di backup del database al momento assente, così da preservare i dati dei progetti nel caso il servizio andasse down.
-- [ ] L’azienda Georicerche S.r.l. ha richiesto in aggiunta anche l’implementazione di un link nel pop-up che porti direttamente ad una cartella sul loro server contenente i file del progetto selezionato.
+- [ ] L’azienda ha richiesto in aggiunta anche l’implementazione di un link nel pop-up che porti direttamente ad una cartella sul loro server contenente i file del progetto selezionato.
 - [ ] è necessaria anche un’ottimizzazione del codice ed una gestione degli errori per garantire un’esperienza utente fluida e senza intoppi.
 
 
