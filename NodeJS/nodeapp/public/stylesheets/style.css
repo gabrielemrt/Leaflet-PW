@@ -71,10 +71,22 @@ a {
   align-items: center;
 }
 
+.elimina{
+  margin-top: 5px;
+  border-radius: 16px;
+  background-color: #FBECD9;
+  color: #4C3E39;
+  border: 1px solid #4C3E39;
+  padding: 5px 8px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
 .leaflet-container a{
   text-decoration: none;
   color: #4C3E39 !important;
-}
+  }
 
 .leaflet-control-zoom-in{
   border-top-left-radius: 16px !important;
@@ -94,6 +106,6 @@ a {
   border-color: #4C3E39;
 }
 
-.leaflet-bar a{
+.leaflet-bar a{ 
   background-color: #FBECD9 !important;
 }

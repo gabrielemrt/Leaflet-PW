@@ -36,10 +36,11 @@ hr{
     width: 50%;
     background: white;
     border-radius: 3vmax 0 0 3vmax;
-    background-size: 200% 100%;
-    background-image: url("https://img.freepik.com/vector-gratis/concepto-agrimensor-tecnologia-agrimensura-geodesia-ciencia-equipos-ingenieria-topografia-personas-mapa-brujula-equipo-topografico-ilustracion-plana-vectorial_613284-2907.jpg?w=2000");
+    background-image: url('https://img.freepik.com/vector-gratis/concepto-agrimensor-tecnologia-agrimensura-geodesia-ciencia-equipos-ingenieria-topografia-personas-mapa-brujula-equipo-topografico-ilustracion-plana-vectorial_613284-2907.jpg?w=2000');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 
 .div-form{
     width: 50%;

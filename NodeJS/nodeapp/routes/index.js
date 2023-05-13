@@ -16,7 +16,6 @@ router.get('/', requiresAuth(), function(req, res, next) {
   });
 });
 
-/*
 // Creating connection
 let connection = mysql.createConnection({
   host: process.env.MYSQL_HOST,
@@ -24,16 +23,7 @@ let connection = mysql.createConnection({
   password: process.env.MYSQL_PASSWORD,
   database: process.env.MYSQL_DATABASE
 });
-*/
 
-const db_path = path.join(__dirname, '../db/db.json');
-router.get('/markers', (req, res) => {
-  fs.readFile(db_path, (err, data) =>{
-    res.send(JSON.parse(data));
-  });
-});
-
-/*
 router.get('/markers', (req, res) => {
   connection.query(
     'SELECT * FROM progetti;',
@@ -41,25 +31,24 @@ router.get('/markers', (req, res) => {
       if (error) throw error;
       res.json(results)});
 });
-*/
-const form_path = path.join(__dirname,'../form/form.html');
 
+const form_path = path.join(__dirname,'../form/form.html');
 router.get('/form', function(req, res, next) {
   res.sendFile(form_path);
 });
 
 const style_path = path.join(__dirname,'../form/style.css');
-
 router.get('/style.css', function(req, res, next) {
   res.sendFile(style_path);
 });
 
 router.post('/form', async (req, res) => {
   connection.query(
-    "INSERT INTO progetti (nome_progetto, data_inizio_progetto, data_fine_progetto, latitudine, longitudine, note) VALUES (?, ?, ?, ?, ?, ?)", [
+    "INSERT INTO progetti (nome_progetto, data_inizio_progetto, data_fine_progetto, citta, latitudine, longitudine, note) VALUES (?, ?, ?, ?, ?, ?, ?)", [
       req.body.nome_progetto,
       req.body.data_inizio_progetto, 
       req.body.data_fine_progetto, 
+      req.body.citta,
       req.body.latitudine, 
       req.body.longitudine, 
       req.body.note, 
@@ -72,4 +61,18 @@ router.post('/form', async (req, res) => {
     res.redirect('/');
 });
 
+router.get('/delete/:id', (req, res) => {
+  const id = req.params.id;
+  connection.query("DELETE FROM progetti WHERE id = ?", [id], 
+  function(error, results, fields) {
+      if (error) throw error;
+    }
+  );
+  res.redirect('/');
+});
+
+
+
 module.exports = router;
+
+//  jrcBwuTFU@Bm8D8g9RPksG@jo9xLFrh@

@@ -8,7 +8,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 require("dotenv").config() //auth0
 
-
 const config = {
   authRequired: false,
   auth0Logout: true,

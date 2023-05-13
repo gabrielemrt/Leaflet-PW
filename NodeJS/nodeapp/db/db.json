@@ -1,6 +1,6 @@
 [
   {
-    "ID": 1,
+    "id": 1,
     "nome_progetto": "Progetto1",
     "data_inizio_progetto": "2020-01-01",
     "data_fine_progetto": "2022-12-31",
@@ -9,7 +9,7 @@
     "note": "note1"
   },
   {
-    "ID": 2,
+    "id": 2,
     "nome_progetto": "Progetto2",
     "data_inizio_progetto": "2022-03-02",
     "data_fine_progetto": "2022-04-12",
@@ -18,7 +18,7 @@
     "note": "note2"
   },
   {
-    "ID": 3,
+    "id": 3,
     "nome_progetto": "Progetto3",
     "data_inizio_progetto": "2022-05-10",
     "data_fine_progetto": "2022-07-06",
@@ -27,7 +27,7 @@
     "note": "note3"
   },
   {
-    "ID": 4,
+    "id": 4,
     "nome_progetto": "Progetto4",
     "data_inizio_progetto": "2022-11-10",
     "data_fine_progetto": "2022-12-06",
@@ -36,7 +36,7 @@
     "note": "note4"
   },
   {
-    "ID": 5,
+    "id": 5,
     "nome_progetto": "Progetto5",
     "data_inizio_progetto": "2021-10-23",
     "data_fine_progetto": "2022-12-05",
