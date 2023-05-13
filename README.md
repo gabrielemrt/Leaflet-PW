@@ -8,20 +8,17 @@
 </div>
 
 ## INDICE
--   [VIDEO](#VIDEO)
 -   [INTRODUZIONE](#INTRODUZIONE)
 -   [GIS e WEBGIS](#GIS-e-WEBGIS)
 -   [TECNOLOGIE UTILIZZATE](#TECNOLOGIE-UTILIZZATE)
 -   [STRUTTURA WEBAPP](#STRUTTURA-WEBAPP)
 -   [CONFIGURAZIONE AUTH0](#CONFIGURAZIONE-AUTH0)
 -   [PRIMO AVVIO](#PRIMO-AVVIO)
+-   [FUNZIONAMENTO](#FUNZIONAMENTO)
 -   [IMPLEMENTAZIONI FUTURE](#IMPLEMENTAZIONI-FUTURE)
 
-## VIDEO 
-[![project work WEBGIS](http://img.youtube.com/vi/T6NpDhKnZj0/0.jpg)](http://www.youtube.com/watch?v=T6NpDhKnZj0 "project work WEBGIS")
-
 ## INTRODUZIONE
-Il nostro progetto consiste nello sviluppo di una mappa interattiva e intuitiva, che visualizza punti d'interesse e funge da sistema di monitoraggio per i progetti aziendali sul territorio. In particolare, il progetto è stato commissionato da Georicerche S.r.l., un gruppo di professionisti attivi nei settori geologico, ambientale ed energetico. La richiesta di Georicerche era quella di avere una mappa interna, accessibile ai dipendenti, che permettesse di monitorare i progetti in corso e quelli già conclusi in modo facile e veloce, filtrati secondo specifici requisiti e con informazioni di base fornite per ciascuno di essi.
+Il nostro progetto consiste nello sviluppo di una mappa interattiva e intuitiva, che visualizza punti d'interesse e funge da sistema di monitoraggio per i progetti aziendali sul territorio. In particolare, il progetto è stato commissionato da un azienda, composta da un gruppo di professionisti attivi nei settori geologico, ambientale ed energetico. La richiesta era quella di avere una mappa interna, accessibile ai dipendenti, che permettesse di monitorare i progetti in corso e quelli già conclusi in modo facile e veloce, filtrati secondo specifici requisiti e con informazioni di base fornite per ciascuno di essi.
 
 ## GIS e WEBGIS
 ![Algorithm schema](./images/webgis.png)
@@ -58,8 +55,8 @@ Successivamente, si dovrà entrare nella directory nodeJS e lanciare il comando 
 
 Per accedere al servizio, invece, bisognerà recarsi sul browser e, se il programma è in esecuzione sul medesimo dispositivo, digitare l'indirizzo "http://localhost:3000" nella barra degli indirizzi del browser. In questo modo, sarà possibile accedere al servizio e utilizzarlo.
 
-## UTILIZZO
-
+## FUNZIONAMENTO
+[![project work WEBGIS](http://img.youtube.com/vi/T6NpDhKnZj0/0.jpg)](http://www.youtube.com/watch?v=T6NpDhKnZj0 "project work WEBGIS")
 
 ## IMPLEMENTAZIONI FUTURE
 Nell’immediato futuro abbiamo intenzione di implementare due ulteriori funzioni: 
