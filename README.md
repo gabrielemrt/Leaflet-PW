@@ -13,8 +13,7 @@
 -   [GIS e WEBGIS](#GIS-e-WEBGIS)
 -   [TECNOLOGIE UTILIZZATE](#TECNOLOGIE-UTILIZZATE)
 -   [STRUTTURA WEBAPP](#STRUTTURA-WEBAPP)
--   [TAPPE](#TAPPE)
--   [CONCLUSIONI](#CONCLUSIONI)
+-   [COME INIZIARE](#COME-INIZIARE)
 -   [IMPLEMENTAZIONI FUTURE](#IMPLEMENTAZIONI-FUTURE)
 
 ## VIDEO 
@@ -50,17 +49,17 @@ La nostra applicazione può essere schematizzata in tre nodi strutturali princip
 Il core del nostro applicativo è comunque la Node App, che gestisce i dati, li elabora, crea la mappa sulla quale questi dati andranno mostrati e si occupa anche della gestione dell’interfaccia web, comprensiva della sua parte grafica.
 
 ## COME INIZIARE
-Inizialmente, per far funzionare il servizio, si dovrà installare Docker sul proprio server. Nel caso in cui si utilizzi Linux, sarà possibile installare Docker tramite il comando "$sudo apt-get install docker.io" e il pacchetto "$sudo apt-get install docker-compose".
-Successivamente, si dovrà entrare nella directory nodeJS e lanciare il comando "$docker-compose up -d", in modo da avviare il servizio in background. In questo modo, se tutto sarà andato per il meglio, comparirà il codice fornito nell'immagine sucessiva, a indicare che il processo è stato avviato correttamente.
+Inizialmente, per far funzionare il servizio, si dovrà installare Docker sul proprio server. Nel caso in cui si utilizzi Linux, sarà possibile installare Docker tramite il comando ```sh $sudo apt-get install docker.io``` e il pacchetto ```sh $sudo apt-get install docker-compose```.
+Successivamente, si dovrà entrare nella directory nodeJS e lanciare il comando ```sh $docker-compose up -d```, in modo da avviare il servizio in background. In questo modo, se tutto sarà andato per il meglio, comparirà il codice fornito nell'immagine sucessiva, a indicare che il processo è stato avviato correttamente.
 ![dockerUP](./images/dockerUP.png)
 Per accedere al servizio, invece, bisognerà recarsi sul browser e, se il programma è in esecuzione sul medesimo dispositivo, digitare l'indirizzo "http://localhost:3000" nella barra degli indirizzi del browser. In questo modo, sarà possibile accedere al servizio e utilizzarlo.
 
 ## IMPLEMENTAZIONI FUTURE
 Nell’immediato futuro abbiamo intenzione di implementare due ulteriori funzioni: 
-[ ] un bottone di modifica per i singoli campi dei progetti, così da evitare il loop inserisci/elimina nel caso avessimo sbagliato ad inserire un singolo dato;
-[ ] un sistema di backup del database al momento assente, così da preservare i dati dei progetti nel caso il servizio andasse down.
-[ ] L’azienda Georicerche S.r.l. ha richiesto in aggiunta anche l’implementazione di un link nel pop-up che porti direttamente ad una cartella sul loro server contenente i file del progetto selezionato.
-[ ] è necessaria anche un’ottimizzazione del codice ed una gestione degli errori per garantire un’esperienza utente fluida e senza intoppi.
+- [ ] un bottone di modifica per i singoli campi dei progetti, così da evitare il loop inserisci/elimina nel caso avessimo sbagliato ad inserire un singolo dato;
+- [ ] un sistema di backup del database al momento assente, così da preservare i dati dei progetti nel caso il servizio andasse down.
+- [ ] L’azienda Georicerche S.r.l. ha richiesto in aggiunta anche l’implementazione di un link nel pop-up che porti direttamente ad una cartella sul loro server contenente i file del progetto selezionato.
+- [ ] è necessaria anche un’ottimizzazione del codice ed una gestione degli errori per garantire un’esperienza utente fluida e senza intoppi.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
