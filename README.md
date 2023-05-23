@@ -61,7 +61,7 @@ Una volta selezionato il progetto di interesse, gli utenti saranno indirizzati a
 ## IMPLEMENTAZIONI FUTURE
 Nell’immediato futuro abbiamo intenzione di implementare due ulteriori funzioni: un bottone di modifica per i singoli campi dei progetti, così da evitare il loop inserisci/elimina nel caso avessimo sbagliato ad inserire un singolo dato, ed un sistema di backup del database al momento assente, così da preservare i dati dei progetti nel caso il servizio andasse down.
 L’azienda Georicerche S.r.l. ha richiesto in aggiunta anche l’implementazione di un link nel pop-up che porti direttamente ad una cartella sul loro server contenente i file del progetto selezionato.
-Infine, è necessaria anche un’ottimizzazione del codice ed una gestione degli errori per garantire un’esperienza utente fluida e senza intoppi.
+Infine, è necessaria anche un’ottimizzazione del codice ed una gestione degli errori per garantire un’esperienza utente fluida e senza intoppi, inserendo anche dei livelli di sicurezza consoni ad un ambiente aziendale che lavora con dati sensibili.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
